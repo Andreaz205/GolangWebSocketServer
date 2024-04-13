@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres_chat:
+    image: postgres:alpine
+    container_name: postgres_chat
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_DB}
+    volumes:
+      - ./docker/pgsql/data/:/var/lib/postgresql/data

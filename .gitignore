@@ -1,0 +1,3 @@
+/docker/pgsql/data
+.env
+/src/.env
